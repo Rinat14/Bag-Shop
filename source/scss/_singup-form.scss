@@ -1,0 +1,167 @@
+@mixin inputStyles($width, $height) {
+	width: $width;
+	height: $height;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: $input-color;
+	background-color: transparent;
+	outline: none;
+	border: 2px solid $input-color;
+	border-radius: 10px;
+	padding: 18px 20px;
+}
+
+.singup-form {
+	width: 100%;
+	padding: 10px 0;
+
+	&__wrapper {
+		width: 100%;
+		height: 500px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__img-block {
+		width: 445px;
+		height: 100%;
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__form.form {
+		width: 654px;
+		height: 100%;
+		padding: 80px 70px;
+		background-color: $form-bg;
+		border-radius: 0px 10px 10px 0px;
+
+		.form__title {
+			text-transform: capitalize;
+			color: #FFFFFF;
+			margin-bottom: 44px;
+		}
+
+		.form__block-wrapper {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		.form__blocks {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 40px;
+		}
+
+		.form__label {
+			position: absolute;
+			top: .55rem;
+			left: 21px;
+			opacity: 0;
+			visibility: hidden;
+			color: $input-color;
+			transition: all 0.3s ease-in-out;
+
+			&.active {
+				top: -0.7rem;
+				opacity: 1;
+				visibility: visible;
+				background-color: $form-bg;
+			}
+		}
+
+		.form__input {
+			@include inputStyles(232px, 44px);
+		}
+
+		.form__label.active + .form__input::placeholder,
+		.form__label.active + .form__address-input::placeholder {
+			color: transparent;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.form__address-input {
+			@include inputStyles(514px, 44px);
+		}
+
+		.form__last-blocks {
+			position: relative;
+		}
+
+		.form__checkbox-input {
+			width: 13px;
+			height: 13px;
+			opacity: 0;
+			cursor: pointer;
+
+			&:checked ~ .form__checkbox-label::before {
+				background-color: #858585;
+				border-color: #858585;
+			}
+			&:checked ~ .form__icon {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		.form__checkbox-label {
+			position: relative;
+			color: $input-color;
+			margin-left: 12px;
+			cursor: pointer;
+
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 4px;
+				left: -25px;
+				width: 15px;
+				height: 15px;
+				background-color: transparent;
+				border: 2px solid $input-color;
+				border-radius: 2px;
+				transition: all 0.2s ease-in-out;
+			}
+
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: -28px;
+				width: 25px;
+				height: 25px;
+				background-color: transparent;
+				z-index: 999;
+			}
+		}
+
+		.form__icon {
+			position: absolute;
+			top: 2.6px;
+			left: 2px;
+			color: $header-background;
+			font-size: 20px;
+			opacity: 0;
+			visibility: hidden;
+			transform: rotate(-5deg);
+			transition: all 0.2s ease-in-out;
+			cursor: pointer;
+		}
+
+		.form__btn {
+			margin-right: 20px;
+			margin-top: -11px;
+		}
+	}
+}

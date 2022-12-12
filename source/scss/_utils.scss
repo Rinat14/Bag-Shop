@@ -1,0 +1,45 @@
+@import "./variables";
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.regular {
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: capitalize;
+}
+.medium {
+	font-size: 20px;
+	font-weight: 500;
+}
+h1 {
+	font-size: 61px;
+	font-weight: 700;
+	text-transform: capitalize;
+}
+h2 {
+	font-size: 31px;
+	font-weight: 700;
+	text-transform: capitalize;
+}
+.btn {
+	min-width: 140px;
+	height: 45px;
+	background: $btn-color;
+	color: $white;
+	border: 2px solid $btn-color;
+	outline: none;
+	border-radius: 5px;
+	text-transform: capitalize;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+
+	&:hover {
+		background-color: transparent;
+		color: $btn-color;
+	}
+}

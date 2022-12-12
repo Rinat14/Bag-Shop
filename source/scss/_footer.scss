@@ -1,0 +1,86 @@
+@import "./singup-form";
+
+.footer {
+	width: 100%;
+	background-color: $footer-bg;
+	padding: 97px 0;
+	border-bottom: 5px solid $btn-color;
+
+	&__content {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__blocks {
+		display: block;
+		width: 264px;
+		height: 100%;
+
+		&:first-child {
+			margin-top: -25px;
+		}
+	}
+
+	&__logo-link {
+		display: block;
+		text-decoration: none;
+		margin-bottom: 12.5px;
+	}
+
+	&__logo {
+		width: 80px;
+		height: 41px;
+	}
+
+	&__site-description {
+		color: $white;
+		opacity: 0.7;
+	}
+
+	&__title {
+		text-transform: capitalize;
+		color: $white;
+		margin-bottom: 30px;
+	}
+
+	&__list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__item {
+		width: 150px;
+		margin-bottom: 10px;
+		text-transform: capitalize;
+		opacity: 0.7;
+		transition: all 0.1s ease-in-out;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	.long {
+		width: 100%;
+	}
+
+	&__link {
+		text-decoration: none;
+		color: $white;
+	}
+
+	&__input-group {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__input {
+		@include inputStyles(100%, 44px);
+		margin-bottom: 20px;
+	}
+}

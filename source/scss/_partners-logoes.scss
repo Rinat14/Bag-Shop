@@ -1,0 +1,25 @@
+.partners-logoes {
+	width: 100%;
+	padding: $padding-size;
+
+	&__group-logo {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__link {
+		text-decoration: none;
+	}
+
+	&__logo-img {
+		width: 264px;
+		height: 70px;
+
+		&:first-child {
+			width: 255px;
+			height: 72px;
+		}
+	}
+}

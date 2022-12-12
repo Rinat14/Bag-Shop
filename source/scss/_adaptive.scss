@@ -1,0 +1,300 @@
+// `xs` returns only a ruleset and no media query
+// ... { ... }
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) {
+	
+}
+@media (max-width: 1269.98px) {
+	.container {
+		padding: 0 30px;
+	}
+}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+	.feature .filter__img-item {
+		width: 244px;
+		height: 300px;
+	}
+
+	.feature .filter__img {
+		width: 200px;
+		height: 235px;
+	}
+
+	.feature .filter__flt-item::after {
+		width: 218px;
+		left: -26px;
+	}
+}
+
+@media (max-width: 1203px) {
+
+	.feature .filter__img-item {
+		// margin-bottom: 30px;
+
+		&:last-child {
+			display: none;
+		}
+	}
+}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+	// .header {
+	// 	padding-bottom: 40px;
+	// }
+
+	.header .main-content__image {
+		width: 135%;
+	}
+
+	.header .header__main-content.main-content {
+		padding-top: 30px;
+	}
+
+	.header .navbar__item .btn {
+		min-width: 128px;
+		height: 38px;
+		font-size: 15px;
+	}
+
+	.header .navbar.active {
+		padding: 13px 3rem;
+	}
+
+	.header .navbar__item:last-child {
+		margin-left: 45px;
+	}
+
+	.header .main-content__title {
+		margin-bottom: 75px;
+	}
+
+	h1 {
+		font-size: 45px;
+	}
+
+	.medium {
+		font-size: 18px;
+	}
+
+	.feature .filter__flt-item::after {
+		width: 198px;
+	}
+
+	.header .main-content__imagetext {
+		width: 11rem;
+		left: 0;
+		top: 4.7rem;
+	}
+
+	.header .main-content__text {
+		width: 350px;
+	}
+}
+
+@media (max-width: 884.98px) {
+	.header .main-content__left {
+		padding-top: 0;
+	}
+	h1 {
+		font-size: 35px;
+	}
+	.header .main-content__title {
+		margin-bottom: 65px;
+	}
+	.medium {
+		font-size: 15px;
+	}
+
+	.feature .filter__flt-list::after {
+		top: 50px;
+	}
+
+	.feature .filter__flt-item::after {
+		width: 174px;
+		height: 3px;
+		top: 49px;
+	}
+
+	.header .main-content__imagetext {
+		width: 8.5rem;
+		top: 3.5rem;
+	}
+	.header .main-content__text {
+		width: 285px;
+		margin-bottom: 30px;
+	}
+	.regular {
+		font-size: 14px;
+	}
+	.header .main-content__btn {
+		min-width: 111px;
+		font-size: 14px;
+		height: 40px;
+	}
+	.header .main-content__discountimg {
+		width: 175px;
+	}
+}
+
+@media (max-width: 854px) {
+	.feature .filter__img-item {
+		margin-bottom: 30px;
+		margin-left: 10px;
+
+		&:last-child {
+			display: block;
+		}
+	}
+
+	.filter__img--m {
+		margin: 35px 0 0 20px;
+	}
+}
+
+@media (max-width: 791px) {
+	.feature .filter__img-item {
+		margin-left: 0;
+	}
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+	.header .navbar__item:last-child {
+		margin-left: 35px;
+	}
+
+	.header .navbar.active {
+		padding: 13px 2rem;
+	}
+}
+
+@media (max-width: 714.98px) {
+	.navbar__list {
+		position: fixed;
+		top: 6rem;
+		left: 0;
+		flex-direction: column;
+		width: 100%;
+		height: 85%;
+		padding: 60px 0;
+		visibility: hidden;
+		transform: translate(-40rem);
+		background-color: $navbar-bg;
+		-webkit-backdrop-filter: blur(20px);
+				backdrop-filter: blur(20px);
+		border-top: 5px solid $btn-color;
+	}
+
+	.navbar.active {
+		.navbar__list {
+			top: 3.8rem;
+			height: 90vh;
+			background-color: $blur;
+		}
+	}
+
+	.navbar__humburger-block  {
+		display: block !important;
+	}
+
+	.header .navbar__item .btn {
+		min-width: 149px;
+		height: 45px;
+		font-size: 17px;
+		border-width: 3px;
+	}
+
+	.header .navbar__btn.active {
+		width: 149px;
+		height: 45px;
+		font-size: 17px;
+		border-width: 3px;
+	}
+
+	.feature .filter__flt-list {
+		flex-wrap: wrap;
+		padding: 0 40px;
+	}
+
+	.feature .filter__flt-item {
+		padding: 0 30px;
+	}
+}
+
+@media (max-width: 684.98px) {
+	.header {
+		padding-bottom: 20px;
+	}
+	.header .main-content__left {
+		padding-top: 2rem;
+	}
+}
+
+@media (max-width: 599.98px) {
+	.header {
+		padding-bottom: 3rem;
+	}
+
+	.header .main-content__right {
+		display: none;
+	}
+
+	.header .main-content__left {
+		width: 100%;
+		padding-top: 3rem;
+	}
+
+	.header .main-content__text {
+		width: 100%;
+	}
+}
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+	.feature .filter__img-list {
+		justify-content: center;
+	}
+
+	.feature .filter__img-item {
+		margin: 0 30px 30px;
+
+		&:first-child {
+			margin-left: 30px;
+		}
+	}
+}
+
+@media (max-width: 412px) {
+	.header .main-content__discountimg {
+		width: 130px;
+		margin-left: -15px;
+	}
+
+	.feature .filter__img-item {
+		margin: 0 0 30px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+}
+
+@media (max-width: 350px) {
+	.header .main-content__discountimg {
+		display: none;
+	}
+	h1 {
+		font-size: 32px;
+	}
+}
+
+
+
+
+
+

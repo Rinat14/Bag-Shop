@@ -1,0 +1,167 @@
+.product {
+	width: 100%;
+	height: 100%;
+	padding: $padding-size;
+
+	&__wrapper {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__instructions {
+		width: 510px;
+		text-align: center;
+		margin-bottom: 70px;
+	}
+
+	&__title {
+		text-transform: capitalize;
+		color: $header-background;
+		margin-bottom: 25px;
+	}
+
+	&__text {
+		text-transform: capitalize;
+		color: #2F2F2F;
+		opacity: 0.9;
+	}
+
+	&__img-list {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		list-style: none;
+	}
+
+	&__img-item {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		width: 264px;
+		height: 273px;
+		mix-blend-mode: normal;
+		border: 2px solid;
+		border-radius: 10px;
+		margin-bottom: 8rem;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0.5rem;
+	}
+
+	&__btn.btn {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 170px;
+		height: 49px;
+		background-color: transparent;
+		border: 2px solid rgba(245, 155, 0, 0.2);
+		border-radius: 5px;
+		color: $btn-color;
+		padding: 0 15px 0 30px;
+
+		&:hover {
+			border-color: $btn-color;
+		}
+	}
+	
+	&__btn-icon {
+		position: relative;
+		left: -3px;
+		font-size: 30px;
+		animation: btn-anime 0.4s ease-in-out infinite alternate;
+	}
+
+	[data-item="1"] {
+		background-color: $first-second-flash-card-bg;
+		border-color: $first-second-flash-card-bg;
+
+		& > .product__img {
+			width: 257px;
+			height: 331px;
+		}
+	}
+	[data-item="2"] {
+		background-color: $first-second-flash-card-bg;
+		border-color: $first-second-flash-card-bg;
+
+		& > .product__img {
+			width: 267px;
+			height: 361px;
+		}
+	}
+	[data-item="3"] {
+		background-color: $third-flash-card-bg;
+		border-color: $third-flash-card-bg;
+
+		& > .product__img {
+			width: 274px;
+			height: 371px;
+		}
+	}
+	[data-item="4"] {
+		background-color: $fourth-flash-card-bg;
+		border-color: $fourth-flash-card-bg;
+
+		& > .product__img {
+			width: 267px;
+			height: 361px;
+		}
+	}
+	[data-item="5"] {
+		background-color: $fifth-flash-card-bg;
+		border-color: $fifth-flash-card-bg;
+
+		& > .product__img {
+			width: 267px;
+			height: 360px;
+		}
+	}
+	[data-item="6"] {
+		background-color: $sixth-flash-card-bg;
+		border-color: $sixth-flash-card-bg;
+
+		& > .product__img {
+			width: 272.56px;
+			height: 368.4px;
+		}
+	}
+	[data-item="7"] {
+		background-color: $seventh-flash-card-bg;
+		border-color: $seventh-flash-card-bg;
+
+		& > .product__img {
+			width: 269.53px;
+			height: 363.87px;
+		}
+	}
+	[data-item="8"] {
+		background-color: $eighth-flash-card-bg;
+		border-color: $eighth-flash-card-bg;
+
+		& > .product__img {
+			width: 263.23px;
+			height: 354.43px;
+		}
+	}
+}
+
+@keyframes btn-anime {
+	0% {
+		left: 3px;
+	}
+
+	100% {
+		left: -3px;
+	}
+}
